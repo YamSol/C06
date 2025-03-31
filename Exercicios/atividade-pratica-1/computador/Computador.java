@@ -8,7 +8,7 @@ public class Computador {
     // Associacoes
     public SistemaOperacional sistemaOperacional;
     public HardwareBasico[] hardwareBasico;
-    MemoriaUSB memoriaUSB;
+    public MemoriaUSB memoriaUSB;
 
     public Computador(float preco, String marca) {
         this.preco = preco;
