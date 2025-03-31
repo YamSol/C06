@@ -1,9 +1,10 @@
+import cliente.Cliente;
+import console.Console;
 import computador.Computador;
 import computador.HardwareBasico;
 import computador.MemoriaUSB;
 
 import java.util.Scanner;
-
 
 public class Main {
 
@@ -12,14 +13,14 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        Cliente cliente = new Cliente("cliente 1", "123456789012", MAX_QUANTITY_PC);
+
         Computador[] computadores = new Computador[MAX_QUANTITY_PC];
         inicializarComputadores(computadores);
 
-        Computador[] computadoresCompra = new Computador[MAX_QUANTITY_PC];
-        Cliente cliente = new Cliente("cliente 1", "123456789012");
-
         boolean exit = false;
-        int codigo = 0;
+        int codigo;
         while (!exit) {
             // Ler codigo
             for (int i = 0; i < MAX_QUANTITY_PC; i++) {
@@ -35,27 +36,24 @@ public class Main {
                 continue;
             }
 
-            // ajustar array index
-            codigo -= 1;
 
+            // Atualizar vetor de compra
+            codigo -= 1; // ajustar array index
             for (int i = 0; i < MAX_QUANTITY_PC; i++) {
-                if (computadoresCompra[i] == null) {
-                    computadoresCompra[i] = computadores[codigo];
+                if (cliente.computadoresCompra[i] == null) {
+                    cliente.computadoresCompra[i] = computadores[codigo];
+                    break;
                 }
             }
+            Console.limpar();
+            System.out.printf("\n\nComputador %d adicionado as compras.\n", codigo);
+            Console.esperar();
 
         }
-        System.out.printf("\n\nComputador %d adicionado as compras.\n", codigo);
 
-        // calcular preco total
-        float total = 0.0f;
-        for (Computador computador : computadoresCompra) {
-            if (computador != null) {
-                total += computador.preco;
-            }
-        }
-
-        System.out.println("Total da compra: " + total);
+        // Resultado
+        Console.limpar();
+        System.out.println("Total da compra: " + cliente.calculaTotalCompra());
 
     }
 

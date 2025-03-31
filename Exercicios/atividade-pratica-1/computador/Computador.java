@@ -21,17 +21,17 @@ public class Computador {
     public void mostrarPCConfigs() {
         System.out.printf("+ Marca: %s\n", marca);
         System.out.printf("+ Preço: %.2f\n", preco);
-        if(sistemaOperacional != null && sistemaOperacional.nome != null && sistemaOperacional.tipo != SistemaOperacional.DEFAULT_TYPE) {
+        if(sistemaOperacional != null && sistemaOperacional.nome != null) {
             System.out.printf("+ Sistema Operacional: %s\n", sistemaOperacional.nome);
             System.out.printf("  - Tipo: %s\n", sistemaOperacional.tipo);
         }
         for (HardwareBasico hardwareBasico : hardwareBasico) {
-            if(hardwareBasico != null && hardwareBasico.nome != null && hardwareBasico.capacidade != HardwareBasico.DEFAULT_CAPACITY) {
+            if(hardwareBasico != null && hardwareBasico.nome != null) {
                 System.out.printf("+ Hardware Basico: %s\n", hardwareBasico.nome);
                 System.out.printf("  - Capacidade: %s\n", hardwareBasico.capacidade);
             }
         }
-        if(memoriaUSB != null && memoriaUSB.nome != null && memoriaUSB.capacidade != MemoriaUSB.DEFAULT_CAPACITY) {
+        if(memoriaUSB != null && memoriaUSB.nome != null) {
             System.out.printf("+ Memoria USB: %s\n", memoriaUSB.nome);
             System.out.printf("  - capacidade: %s\n", memoriaUSB.capacidade);
         }
