@@ -18,13 +18,12 @@ public class Computador {
         hardwareBasico = new HardwareBasico[MAXSIZE_HARDWARE_BASICO];
     }
 
-    void mostrarPCConfigs() {
-        System.out.println("====Configuração PC====");
+    public void mostrarPCConfigs() {
         System.out.printf("+ Marca: %s\n", marca);
         System.out.printf("+ Preço: %.2f\n", preco);
         if(sistemaOperacional != null && sistemaOperacional.nome != null && sistemaOperacional.tipo != SistemaOperacional.DEFAULT_TYPE) {
-            System.out.printf("+ Sistema Operacional: %s\n", sistemaOperacional);
-            System.out.printf("  - capacidade: %s\n", sistemaOperacional.tipo);
+            System.out.printf("+ Sistema Operacional: %s\n", sistemaOperacional.nome);
+            System.out.printf("  - Tipo: %s\n", sistemaOperacional.tipo);
         }
         for (HardwareBasico hardwareBasico : hardwareBasico) {
             if(hardwareBasico != null && hardwareBasico.nome != null && hardwareBasico.capacidade != HardwareBasico.DEFAULT_CAPACITY) {
