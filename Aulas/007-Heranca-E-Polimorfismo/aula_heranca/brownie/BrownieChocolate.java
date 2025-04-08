@@ -1,4 +1,4 @@
-package aula.brownie;
+package aula_heranca.brownie;
 
 public class BrownieChocolate extends Brownie {
 

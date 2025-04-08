@@ -1,6 +1,6 @@
-package aula;
+package aula_heranca;
 
-import aula.brownie.BrownieNutella;
+import aula_heranca.brownie.BrownieNutella;
 
 public class Main {
     public static void main(String[] args) {
