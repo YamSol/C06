@@ -1,4 +1,4 @@
-package exercicio1;
+package exercicios.exercicio1;
 
 public class Brownie {
     protected String nome;

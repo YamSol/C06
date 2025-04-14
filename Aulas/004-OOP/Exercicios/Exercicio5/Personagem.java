@@ -29,5 +29,5 @@ class Personagem {
 	System.out.println("Pontos: "+this.pontos);
 	System.out.println("=--------------------=");
     }
- q   
+
 }

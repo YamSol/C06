@@ -1,4 +1,4 @@
-package exercicio1;
+package exercicios.exercicio3;
 
 public class BrownieNutella extends Brownie {
     public BrownieNutella(String nome, double preco, String sabor) {
@@ -6,6 +6,6 @@ public class BrownieNutella extends Brownie {
     }
 
     public void adicionaNutella() {
-        System.out.println("Adicionando Nutella à "+this.nome);
+        System.out.println("Adicionando Nutella..");
     }
 }

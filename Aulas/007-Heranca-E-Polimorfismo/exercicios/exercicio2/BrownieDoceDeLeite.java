@@ -1,4 +1,4 @@
-package exercicio1;
+package exercicios.exercicio2;
 
 public class BrownieDoceDeLeite extends Brownie {
     public BrownieDoceDeLeite(String nome, double preco, String sabor) {
@@ -8,4 +8,10 @@ public class BrownieDoceDeLeite extends Brownie {
     public void adicionaDoceDeLeite() {
         System.out.println("Adicionando Doce de Leite à "+this.nome);
     }
+
+    @Override
+    public void addCarrinhoDeCompras() {
+        System.out.println("Adicionando Brownie de Doce de Leite ao Carrinho de Compras");
+    }
+
 }
