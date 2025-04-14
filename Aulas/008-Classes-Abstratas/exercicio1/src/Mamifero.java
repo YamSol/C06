@@ -1,4 +1,4 @@
-public class Mamifero {
+public abstract class Mamifero {
     protected String nome;
     protected double vida;
 
@@ -10,9 +10,8 @@ public class Mamifero {
     abstract public void emitirSom();
 
     public void mostrarInfo() {
-        System.out.println(------------);
+        System.out.println("------------");
         System.out.println("Nome: " + nome);
         System.out.println("Vida: " + vida);
     }
-    
 }

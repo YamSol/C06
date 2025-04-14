@@ -1,4 +1,10 @@
-package PACKAGE_NAME;
+public class Lontra extends Mamifero {
+    public Lontra(String nome, double vida) {
+        super(nome, vida);
+    }
 
-public class Lontra {
+    @Override
+    public void emitirSom() {
+        System.out.println("� � � � � � � � � � � � � � � � � � � �");
+    }
 }

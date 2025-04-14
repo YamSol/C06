@@ -1,4 +1,10 @@
-package PACKAGE_NAME;
+public class Boi extends Mamifero {
+    public Boi(String nome, double vida) {
+        super(nome, vida);
+    }
 
-public class Boi {
+    @Override
+    public void emitirSom() {
+        System.out.println("Mu mu mu mu mu");
+    }
 }
