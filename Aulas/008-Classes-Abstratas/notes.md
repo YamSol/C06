@@ -1,8 +1,6 @@
 # Classes Abstratas
 
-A instanciação de uma Superclasse, muitas vezes não fará sentido. Para esses casos, 
-
-**Classes Abstratas** foram criadas.
+**Classes abstratas** são utilizadas quando a instância de uma superclasse não faz sentido. Elas permitem definir uma estrutura comum para subclasses, que devem implementar os métodos e propriedades especificados, garantindo assim uma base consistente para a herança
 
 Estas:
 - são impossíveis de ser instanciadas,
